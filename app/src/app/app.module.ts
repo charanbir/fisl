@@ -11,10 +11,19 @@ import {ProductEditComponent}  from './components/product-edit.component';
 
 import {ProductService} from './services/product.service';
 
+import {CountryListComponent}  from './components/country-list.component';
+import {CountryAddComponent}   from './components/country-add.component';
+import {CountryEditComponent}  from './components/country-edit.component';
+
+import {CountryService} from './services/country.service';
+
 const appRoutes: Routes = [
   { path: '',                     component: ProductListComponent },
   { path: 'add',				  component: ProductAddComponent },
-  { path: 'edit/:id',             component: ProductEditComponent }
+  { path: 'edit/:id',             component: ProductEditComponent },
+  
+  { path: 'country/add',                  component: CountryAddComponent },
+  { path: 'country/edit/:id',             component: CountryEditComponent }
 ];
 
 @NgModule({
@@ -29,9 +38,12 @@ const appRoutes: Routes = [
 	AppComponent,
 	ProductListComponent,
 	ProductAddComponent,
-	ProductEditComponent
+	ProductEditComponent,
+    CountryListComponent,
+	CountryAddComponent,
+	CountryEditComponent
   ],
-  providers: [ProductService],
+  providers: [ProductService, CountryService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

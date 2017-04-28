@@ -22,6 +22,8 @@ AppComponent = __decorate([
         		"<ul class=\"nav navbar-nav\">" +
         		"<li><a routerLink='/'>List of Products</a></li>" +
         		"<li><a routerLink='/add'>Create New Product</a></li>" +
+        		"<li><a routerLink='/country'>List of Countries</a></li>" +
+        		"<li><a routerLink='/country/add'>Create New Country</a></li>" +
         		"</ul>" +
         		"</div>" +
         		"</nav>" +

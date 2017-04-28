@@ -15,10 +15,19 @@ var product_list_component_1 = require("./components/product-list.component");
 var product_add_component_1 = require("./components/product-add.component");
 var product_edit_component_1 = require("./components/product-edit.component");
 var product_service_1 = require("./services/product.service");
+
+var country_list_component_1 = require("./components/country-list.component");
+var country_add_component_1 = require("./components/country-add.component");
+var country_edit_component_1 = require("./components/country-edit.component");
+var country_service_1 = require("./services/country.service");
+
 var appRoutes = [
     { path: '', component: product_list_component_1.ProductListComponent },
     { path: 'add', component: product_add_component_1.ProductAddComponent },
-    { path: 'edit/:id', component: product_edit_component_1.ProductEditComponent }
+    { path: 'edit/:id', component: product_edit_component_1.ProductEditComponent },
+
+    { path: 'country/add', component: country_add_component_1.CountryAddComponent },
+    { path: 'country/edit/:id', component: country_edit_component_1.CountryEditComponent }
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -38,9 +47,13 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             product_list_component_1.ProductListComponent,
             product_add_component_1.ProductAddComponent,
-            product_edit_component_1.ProductEditComponent
+            product_edit_component_1.ProductEditComponent,
+
+            country_list_component_1.CountryListComponent,
+            country_add_component_1.CountryAddComponent,
+            country_edit_component_1.CountryEditComponent
         ],
-        providers: [product_service_1.ProductService],
+        providers: [ product_service_1.ProductService, country_service_1.CountryService],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
