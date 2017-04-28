@@ -1,0 +1,23 @@
+{
+  "name": "fisl",
+  "version": "1.0.0",
+  "description": "USC FISL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "keywords": [
+    "USC FISL"
+  ],
+  "author": "University of Southern California",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.1"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.0.1"
+  }
+}
