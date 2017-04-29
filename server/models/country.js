@@ -10,6 +10,6 @@
      versionKey: false
     });
      
-    var country = mongoose.model('country', countrySchema);
+    var country = mongoose.model('countries', countrySchema);
      
     module.exports = country;

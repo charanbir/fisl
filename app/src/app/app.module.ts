@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'edit/:id',             component: ProductEditComponent },
   
   { path: 'country',                      component: CountryListComponent },
-  { path: 'country/add',                  component: CountryAddComponent },
+  { path: 'country-add',                  component: CountryAddComponent },
   { path: 'country/edit/:id',             component: CountryEditComponent }
 ];
 

@@ -3,7 +3,7 @@ import { Country } from '../model/country';
 import {CountryService} from '../services/country.service';
 
 @Component({
-	selector: 'country',
+	selector: 'countries',
 	template: `
 		<div class="country-list">
 			<table class="table table-striped">
@@ -13,13 +13,13 @@ import {CountryService} from '../services/country.service';
 					<th>Description</th>
 					<th></th>
 				</tr>
-				<tr *ngFor="let country_var of country, let i = index ">
+				<tr *ngFor="let country of countries, let i = index ">
 					<td>{{i+1}}</td>
-					<td>{{country_var.code}}</td>
-					<td>{{country_var.desc}}</td>
+					<td>{{country.code}}</td>
+					<td>{{country.desc}}</td>
 					<td>
-						<a  [routerLink]="['/edit', country_var._id]" class="btn btn-default">Edit</a> 
-						<a  (click)="deleteCountry(country_var._id)" class="btn btn-danger">Delete</a>
+						<a  [routerLink]="['/edit', country._id]" class="btn btn-default">Edit</a> 
+						<a  (click)="deleteCountry(country._id)" class="btn btn-danger">Delete</a>
 					</td>
 				</tr>
 		   </table>
@@ -27,7 +27,7 @@ import {CountryService} from '../services/country.service';
 	`	
 })
 export class CountryListComponent implements OnInit {
-	country: Country[];
+	countries: Country[];
 	del : any;
 
 	constructor( private countryService: CountryService  ){
