@@ -1,0 +1,60 @@
+router                                                                                                         
+ ├── query                                         *                                                           
+ ├── expressInit                                   *                                                           
+ ├── jsonParser                                    *                                                           
+ ├── urlencodedParser                              *                                                           
+ ├── <anonymous>                                   *                                                           
+ ├── serveStatic                                   *                                                           
+ ├── serveStatic                                   *                                                           
+ ├── serveStatic                                   *                                                           
+ ├── router                                        *                                                           
+ │   router                                                                                                    
+ │    └── bound dispatch                           /                                                           GET
+ │         └── <anonymous>                         /                                                           GET
+ │        
+ │   
+ └── router                                        /^\/api\/?(?=\/|$)/                                         
+     router                                                                                                    
+      ├── router                                   /^\/product\/?(?=\/|$)/                                     
+      │   router                                                                                               
+      │    ├── bound dispatch                      /                                                           GET
+      │    │    └── <anonymous>                    /                                                           GET
+      │    │   
+      │    ├── bound dispatch                      /:id                                                        GET
+      │    │    └── <anonymous>                    /                                                           GET
+      │    │   
+      │    ├── bound dispatch                      /                                                           POST
+      │    │    └── <anonymous>                    /                                                           POST
+      │    │   
+      │    ├── bound dispatch                      /:id                                                        PUT
+      │    │    └── <anonymous>                    /                                                           PUT
+      │    │   
+      │    ├── bound dispatch                      /:id                                                        DELETE
+      │    │    └── <anonymous>                    /                                                           DELETE
+      │    │   
+      │    └── bound dispatch                      /                                                           PURGE
+      │         └── <anonymous>                    /                                                           PURGE
+      │        
+      │   
+      └── router                                   /^\/country\/?(?=\/|$)/                                     
+          router                                                                                               
+           ├── bound dispatch                      /                                                           GET
+           │    └── <anonymous>                    /                                                           GET
+           │   
+           ├── bound dispatch                      /:id                                                        GET
+           │    └── <anonymous>                    /                                                           GET
+           │   
+           ├── bound dispatch                      /                                                           POST
+           │    └── <anonymous>                    /                                                           POST
+           │   
+           ├── bound dispatch                      /:id                                                        PUT
+           │    └── <anonymous>                    /                                                           PUT
+           │   
+           ├── bound dispatch                      /:id                                                        DELETE
+           │    └── <anonymous>                    /                                                           DELETE
+           │   
+           └── bound dispatch                      /                                                           PURGE
+                └── <anonymous>                    /                                                           PURGE
+               
+          
+     

@@ -26,6 +26,7 @@ var appRoutes = [
     { path: 'add', component: product_add_component_1.ProductAddComponent },
     { path: 'edit/:id', component: product_edit_component_1.ProductEditComponent },
 
+    { path: 'country', component: country_list_component_1.CountryListComponent },
     { path: 'country/add', component: country_add_component_1.CountryAddComponent },
     { path: 'country/edit/:id', component: country_edit_component_1.CountryEditComponent }
 ];

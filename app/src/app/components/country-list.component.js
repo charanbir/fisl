@@ -16,16 +16,16 @@ var CountryListComponent = (function () {
     }
     CountryListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.countryService.getCountrys().subscribe(function (countrys) {
-            _this.countrys = countrys;
+        this.countryService.getCountrys().subscribe(function (country) {
+            _this.country = country;
         });
     };
     CountryListComponent.prototype.deleteCountry = function (id) {
         var _this = this;
         this.countryService.deleteCountry(id).subscribe(function (del) {
-            for (var i = 0; i < _this.countrys.length; i++) {
-                if (id == _this.countrys[i]._id) {
-                    _this.countrys.splice(i, 1);
+            for (var i = 0; i < _this.country.length; i++) {
+                if (id == _this.country[i]._id) {
+                    _this.country.splice(i, 1);
                 }
             }
         });
@@ -34,8 +34,8 @@ var CountryListComponent = (function () {
 }());
 CountryListComponent = __decorate([
     core_1.Component({
-        selector: 'countrys',
-        template: "\n\t\t<div class=\"country-list\">\n\t\t\t<table class=\"table table-striped\">\n\t\t\t\t<tr>\n\t\t\t\t\t<th>#</th>\n\t\t\t\t\t<th>Code</th>\n\t\t\t\t\t<th>Description</th>\n\t\t\t\t\t<th></th>\n\t\t\t\t</tr>\n\t\t\t\t<tr *ngFor=\"let country of countrys, let i = index \">\n\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t<td>{{country.code}}</td>\n\t\t\t\t\t<td>{{country.desc}}</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<a  [routerLink]=\"['/edit', country._id]\" class=\"btn btn-default\">Edit</a> \n\t\t\t\t\t\t<a  (click)=\"deleteCountry(country._id)\" class=\"btn btn-danger\">Delete</a>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t   </table>\n\t\t</div>\n\t"
+        selector: 'country',
+        template: "\n\t\t<div class=\"country-list\">\n\t\t\t<table class=\"table table-striped\">\n\t\t\t\t<tr>\n\t\t\t\t\t<th>#</th>\n\t\t\t\t\t<th>Code</th>\n\t\t\t\t\t<th>Description</th>\n\t\t\t\t\t<th></th>\n\t\t\t\t</tr>\n\t\t\t\t<tr *ngFor=\"let country of country, let i = index \">\n\t\t\t\t\t<td>{{i+1}}</td>\n\t\t\t\t\t<td>{{country.code}}</td>\n\t\t\t\t\t<td>{{country.desc}}</td>\n\t\t\t\t\t<td>\n\t\t\t\t\t\t<a  [routerLink]=\"['/edit', country._id]\" class=\"btn btn-default\">Edit</a> \n\t\t\t\t\t\t<a  (click)=\"deleteCountry(country._id)\" class=\"btn btn-danger\">Delete</a>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t   </table>\n\t\t</div>\n\t"
     }),
     __metadata("design:paramtypes", [country_service_1.CountryService])
 ], CountryListComponent);

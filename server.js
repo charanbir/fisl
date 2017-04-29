@@ -7,6 +7,7 @@
     require("./server/config/db"); 
      
     var app = express();
+
      
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,3 +35,12 @@
     app.listen(port, function() {
 		console.log("Server is running at : http://localhost:" + port);
     });
+
+     // Absolute path to output file
+     var path = require('path')
+     var filepath = path.join(__dirname, 'routes.generated.txt')
+
+     // Invoke express-print-routes
+     require('express-print-routes')(app, filepath)
+     
+ 

@@ -15,9 +15,11 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
+    "express-print-routes": "^1.0.0",
     "mongoose": "^4.8.1"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.1"
+    "@angular/cli": "^1.0.1",
+    "pathfinder-ui": "^1.0.3"
   }
 }

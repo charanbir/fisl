@@ -3,7 +3,7 @@ import { Country } from '../model/country';
 import {CountryService} from '../services/country.service';
 
 @Component({
-	selector: 'countrys',
+	selector: 'country',
 	template: `
 		<div class="country-list">
 			<table class="table table-striped">
@@ -13,13 +13,13 @@ import {CountryService} from '../services/country.service';
 					<th>Description</th>
 					<th></th>
 				</tr>
-				<tr *ngFor="let country of countrys, let i = index ">
+				<tr *ngFor="let country_var of country, let i = index ">
 					<td>{{i+1}}</td>
-					<td>{{country.code}}</td>
-					<td>{{country.desc}}</td>
+					<td>{{country_var.code}}</td>
+					<td>{{country_var.desc}}</td>
 					<td>
-						<a  [routerLink]="['/edit', country._id]" class="btn btn-default">Edit</a> 
-						<a  (click)="deleteCountry(country._id)" class="btn btn-danger">Delete</a>
+						<a  [routerLink]="['/edit', country_var._id]" class="btn btn-default">Edit</a> 
+						<a  (click)="deleteCountry(country_var._id)" class="btn btn-danger">Delete</a>
 					</td>
 				</tr>
 		   </table>
@@ -27,23 +27,23 @@ import {CountryService} from '../services/country.service';
 	`	
 })
 export class CountryListComponent implements OnInit {
-	countrys: Country[];
+	country: Country[];
 	del : any;
 
 	constructor( private countryService: CountryService  ){
     }
 
 	ngOnInit(){
-		this.countryService.getCountrys().subscribe(countrys => {
-	        this.countrys = countrys;
+		this.countryService.getCountrys().subscribe(country => {
+	        this.country = country;
 		});
 	}
 
 	deleteCountry( id: string ){
 		this.countryService.deleteCountry(id).subscribe( del => {
-	        for( let i = 0; i < this.countrys.length;i++ ){
-				if( id == this.countrys[i]._id  ){
-					this.countrys.splice(i, 1);
+	        for( let i = 0; i < this.country.length;i++ ){
+				if( id == this.country[i]._id  ){
+					this.country.splice(i, 1);
 				}
 			}
 		});
