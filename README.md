@@ -14,7 +14,7 @@ Download Mongo and Node before proceeding.
 1. Start MongoDB
    
    ```shell
-   mongo start
+   mongod
    ```  
 
 2. ```shell
@@ -31,6 +31,10 @@ Download Mongo and Node before proceeding.
 4. Start server
    
    ```shell
+   npm start
+   ```
+   or
+   ```shell
    node server
    ```
    
@@ -39,24 +43,9 @@ Download Mongo and Node before proceeding.
     http://localhost:3000
     ```
 
-### Tips and Troubleshooting
-
-   * Download open source IDE
+### Import tables from CSV
 
    ```shell
-   https://code.visualstudio.com/
-   ```
-
-   * Path to Database Configuration
-   ```shell
-   server/config/db.js
-   ```
-   
-   * Import tables from CSV
-
-   ```shell
-   mongoimport -d fisl -c products --type csv --file FISL.BANK.TRANS.CLASS.CSV --headerline
-
    mongoimport -d fisl -c	FISL_BANK_ASSET_CLASS	--type csv --file	FISL.BANK.ASSET.CLASS.CSV	--headerline
    mongoimport -d fisl -c	FISL_BANK	--type csv --file	FISL.BANK.CSV	--headerline
    mongoimport -d fisl -c	FISL_BANK_TRANS_CLASS	--type csv --file	FISL.BANK.TRANS.CLASS.CSV	--headerline
@@ -70,8 +59,3 @@ Download Mongo and Node before proceeding.
    mongoimport -d fisl -c	ISL_FUNDS	--type csv --file	ISL.FUNDS.CSV	--headerline
    mongoimport -d fisl -c	ISL_SOI_CODES	--type csv --file	ISL.SOI.CODES.CSV	--headerline
    ```
-
-### Contact
-
-    * Charanbir Singh Rekhi ``crekhi@usc.edu``
-    * Swapnil Joshi ``swapnilj@usc.edu``
