@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 @Component({
 	selector: 'product-add',
 	templateUrl: 'app/components/product-form.html',
-})
+})    
+
 export class ProductAddComponent  {
 	public product: any = {};
     public isEdit: boolean = false;
@@ -29,7 +30,6 @@ export class ProductAddComponent  {
 			subscribe(
                     product  => {}, //  this.product.push(product),
 		            error =>  this.errorMessage = <any>error );				
-
 
 		this._router.navigateByUrl('/');
 	}

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { CustomFormsModule } from 'ng2-validation';
 
 import { AppComponent }     from './app.component';
 import {ProductListComponent}  from './components/product-list.component';

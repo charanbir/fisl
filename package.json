@@ -16,7 +16,8 @@
     "body-parser": "^1.16.0",
     "express": "^4.14.1",
     "express-print-routes": "^1.0.0",
-    "mongoose": "^4.8.1"
+    "mongoose": "^4.8.1",
+    "ng2-validation": "^4.1.0"
   },
   "devDependencies": {
     "@angular/cli": "^1.0.1",
